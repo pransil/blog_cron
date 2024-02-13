@@ -36,10 +36,10 @@ timestr = currentTime.strftime('%Y-%m-%dT%H:%M:%SZ')
 print (timestr)
 
 with open('../files/newTrackpoint.gpx', 'w') as f:
-    t1 = '    <trkpt lat="' + latstr + '" lon="' + lonstr + '">' '\n'
+    t1 = '      <trkpt lat="' + latstr + '" lon="' + lonstr + '">' '\n'
     f.write(t1)
-    t2 = '      <time>' + timestr + '</time>' '\n'
+    t2 = '        <time>' + timestr + '</time>' '\n'
     f.write(t2)
-    t3 = '    </trkpt>' '\n'
+    t3 = '      </trkpt>' '\n'
     f.write(t3)
     
