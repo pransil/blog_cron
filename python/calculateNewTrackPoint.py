@@ -10,7 +10,7 @@ currentTime = datetime.now(timezone.utc)
 timestr = currentTime.strftime('%Y-%m-%dT%H:%M:%SZ')
 print (timestr)
 
-with open('../files/latlon.txt', 'r') as f:
+with open('/home/user/dev/blog/gpx_repo/blog_cron/files/latlon.txt', 'r') as f:
     lat = float(f.readline())
     lon = float(f.readline())
     lat += 0.2 * random.random()
@@ -20,7 +20,7 @@ latstr = str(round(lat, 2))
 lonstr = str(round(lon, 2))
 print("Lat: ", latstr)
 print("Lon: ", lonstr)
-with open('../files/latlon.txt', 'w') as f:
+with open('/home/user/dev/blog/gpx_repo/blog_cron/files/latlon.txt', 'w') as f:
     f.write(latstr + '\n')
     f.write(lonstr + '\n')
     f.write(timestr + '\n')
