@@ -25,7 +25,7 @@ with open('../files/latlon.txt', 'r') as f:
 latstr = str(round(lat, 2))
 lonstr = str(round(lon, 2))
 print("Prev Lat: ", prev_lat)
-print("Prev Lon: ", prev_lat)
+print("Prev Lon: ", prev_lon)
 
 with open('../files/latlon_previous.txt', 'w') as f:
     f.write(latstr + '\n')
