@@ -1,4 +1,9 @@
 #!/bin/bash
+# This part only needed to fake the new trackpoint
+# updating latlon.txt (+0.1, -0.2 and adding the date/time)
+python ../python/calculateNewTrackpoint.py
+# Comvert latlon.txt to tracknewTrackpoint.gpx
+python ../python/newTrackpoint.py
 # newTrkpoint.sh - add a new trackpoint to data.gpx
 cat ../files/newTrackpoint.gpx >> ../files/trackpoints.gpx
 cat ../files/trackpoints.gpx > ../files/data.gpx
