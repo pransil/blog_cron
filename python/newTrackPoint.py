@@ -6,11 +6,11 @@ from datetime import datetime, date, time, timezone
 
 distance_threshold = 0.05
 
-with open('../files/latlon_previous.txt', 'r') as fp:
+with open('/home/user/dev/blog/gpx_repo/blog_cron/files/latlon_previous.txt', 'r') as fp:
     prev_lat = float(fp.readline())
     prev_lon = float(fp.readline())
 
-with open('../files/latlon.txt', 'r') as f:
+with open('/home/user/dev/blog/gpx_repo/blog_cron/files/latlon.txt', 'r') as f:
     lat = float(f.readline())
     lon = float(f.readline())
     lat_diff = abs(lat - prev_lat)
@@ -27,7 +27,7 @@ lonstr = str(round(lon, 2))
 print("Prev Lat: ", prev_lat)
 print("Prev Lon: ", prev_lon)
 
-with open('../files/latlon_previous.txt', 'w') as f:
+with open('/home/user/dev/blog/gpx_repo/blog_cron/files/latlon_previous.txt', 'w') as f:
     f.write(latstr + '\n')
     f.write(lonstr + '\n')
 
@@ -35,7 +35,7 @@ currentTime = datetime.now(timezone.utc)
 timestr = currentTime.strftime('%Y-%m-%dT%H:%M:%SZ')
 print (timestr)
 
-with open('../files/newTrackpoint.gpx', 'w') as f:
+with open('/home/user/dev/blog/gpx_repo/blog_cron/files/newTrackpoint.gpx', 'w') as f:
     t1 = '      <trkpt lat="' + latstr + '" lon="' + lonstr + '">' '\n'
     f.write(t1)
     t2 = '        <time>' + timestr + '</time>' '\n'
