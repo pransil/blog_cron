@@ -11,6 +11,7 @@ cat $FPATH/files/trackpoints.gpx > $FPATH/files/data.gpx
 cat $FPATH/files/trackEndLines.gpx >> $FPATH/files/data.gpx
 cat $FPATH/files/waypoints.gpx >> $FPATH/files/data.gpx
 cat $FPATH/files/gpxEndLine.gpx >> $FPATH/files/data.gpx
+cp $FPATH/files/data.gpx ../../pransil.github.io
 cd ../../pransil.github.io
 git add data.gpx
 git commit -m "Added new trackpoint"
