@@ -1,6 +1,7 @@
 # newTrackPoint.py
 # Make a new track point file if the new lat/lon is different than the previous by more than distance_threshold
 import os
+import random
 
 from datetime import datetime, date, time, timezone
 
@@ -12,8 +13,8 @@ print (timestr)
 with open('../files/latlon.txt', 'r') as f:
     lat = float(f.readline())
     lon = float(f.readline())
-    lat += 0.1
-    lon -= 0.2
+    lat += 0.2 * random()
+    lon -= 0.4 * random()
 
 latstr = str(round(lat, 2))
 lonstr = str(round(lon, 2))
