@@ -13,8 +13,8 @@ print (timestr)
 with open('../files/latlon.txt', 'r') as f:
     lat = float(f.readline())
     lon = float(f.readline())
-    lat += 0.2 * random()
-    lon -= 0.4 * random()
+    lat += 0.2 * random.random()
+    lon -= 0.4 * random.random()
 
 latstr = str(round(lat, 2))
 lonstr = str(round(lon, 2))
