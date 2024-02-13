@@ -4,7 +4,7 @@ FPATH=/home/user/dev/blog/gpx_repo/blog_cron
 # updating latlon.txt (+0.1, -0.2 and adding the date/time)
 python $FPATH/python/calculateNewTrackPoint.py
 # Comvert latlon.txt to tracknewTrackpoint.gpx
-python $FPATH/python/newTrackpoint.py
+python $FPATH/python/newTrackPoint.py
 # newTrkpoint.sh - add a new trackpoint to data.gpx
 cat $FPATH/files/newTrackpoint.gpx >> $FPATH/files/trackpoints.gpx
 cat $FPATH/files/trackpoints.gpx > $FPATH/files/data.gpx
